@@ -86,7 +86,7 @@ module HTTP
 
       finish_response if finished
 
-      chunk.to_s
+      chunk.to_s || "".b
     end
 
     # Reads data from socket up until headers are loaded
